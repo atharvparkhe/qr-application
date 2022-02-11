@@ -17,6 +17,7 @@ Using this application you can read (decode) QR codes.
 - Generate QR codes for text and links.
 - QR codes generated are universally accepted.
 - Read/Decode QR codes.
+
 ## Tech Stack
 
 **Backebd:** Django *(Python)*
@@ -101,6 +102,10 @@ Check the terminal if any error.
 The docs folder contain all the project documentations and screenshots related the project.
 
 Postman Endpoints - https://www.getpostman.com/collections/cd81994f26e4f66094be
+
+**ENDPOINTS**
+
+![ENV file](docs/ss.png)
 
 ## Demo
 
