@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/qrcode(1).png">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer>
+        const BASE_URL = "https://django-qr-code-application.herokuapp.com/";
+
+        
+
+        async function change() {
+            let a = document.getElementById("QR-Code-Link");
+            let img = document.getElementById("QR-Code-img");
+            let text = document.getElementById("qr-code-user-input");
+
+            GetQRCode(text.value, img, a)
+
+        }
+        async function GetQRCode(data, img, a) {
+            const spamText = document.getElementById("QR-Code-text-span");
+        const linkText = document.getElementById("QR-Code-Link-text");
+            fetch(BASE_URL + "api/generate/", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "text": data
+                }),
+            }).then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    img.src = BASE_URL + data.file + "/"
+                    a.href = img.src
+                    
+                }).then(() => {
+                    // linkText.style.display = "flex";
+                    spamText.style.display = "none";
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="qr-code-generator-main-page">
+        <div class="qr-code-genereted-img-container">
+            <a href="/qrcode(1).png" download id="QR-Code-Link">
+                <span id="QR-Code-text-span">Generator</span>
+                <img src="./qrcode(1).png" alt="QR Code" class="qr-code-img" id="QR-Code-img">
+                <!-- <span id="QR-Code-Link-text">Download</span> -->
+            </a>
+        </div>
+        <div class="qr-code-user-control-div">
+            <textarea name="" id="qr-code-user-input" cols="30" rows="1"></textarea>
+            <button onclick="change()">Generate QR Code</button>
+            <div class="qr-code-read-generate-links">
+                <a href="./readCode.html">Read QR Code</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

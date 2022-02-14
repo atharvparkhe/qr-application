@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer>
+        const BASE_URL = "https://django-qr-code-application.herokuapp.com/";
+
+
+        async function GetQRDecoded(event) {
+            event.preventDefault()
+            // let text = document.getElementById("qr-code-user-input");
+            console.log(event.target[0].files[0])
+            formData = new FormData()
+            formData.append('file', event.target[0].files[0])
+            // console.log(e)
+            fetch(BASE_URL + "api/read/", {
+                method: 'POST',
+
+                body: formData
+            }).then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    document.getElementById("qr-code-user-input").value = data.text
+                }).then(() => {
+
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+        function copyToClipBoard() {
+            copyText = document.getElementById("qr-code-user-input")
+            copyText.select();
+            document.execCommand("copy");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="qr-code-generator-main-page" >
+        <form class="" onsubmit="GetQRDecoded(event)">
+            <div class="qr-code-genereted-img-container">
+                <input type="file" name="qrCode" id="qrCode">
+            </div>
+            <div class="qr-code-user-control-div">
+                <button>Decode QR Code</button>
+            </div>
+        </form>
+        <div class="qr-code-user-control-div">
+            <textarea name="" id="qr-code-user-input" cols="30" readonly rows="1"></textarea>
+            <div class="qr-code-user-control-div">
+                <button onclick="copyToClipBoard()">Copy</button>
+            </div>
+
+            <div class="qr-code-read-generate-links">
+                <a href="./generateCode.html">Generate QR Code</a>
+                <a href="./mainPage.html">Go to home page</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.qr-code-generator-main-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* background-color: rgb(245, 245, 245); */
+    background-image: linear-gradient( to top left,rgb(235, 255, 235), 
+    rgb(157, 255, 157), 
+    rgb(211, 255, 205),
+    rgb(112, 255, 93),
+    rgb(27, 235, 0),
+    rgb(209, 255, 203)
+    );
+    min-height: 100vh;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in ;
+}
+
+.qr-code-genereted-img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(92, 92, 92);
+    /* width: 225px; */
+    /* height: 225px; */
+    /* background-color: antiquewhite; */  
+}
+.qr-code-genereted-img-container > a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+.qr-code-img{
+    width: 225px;
+    border: 2px solid rgb(85, 255, 85);
+    height: 225px;
+}
+.qr-code-read-generate-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.qr-code-read-generate-links > a{
+    background-color: rgb(177, 255, 197);
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    width: 225px;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    margin: 0.5em;
+}
+.qr-code-read-generate-links > a:hover{
+    background-color: rgb(35, 223, 82);
+}
+
+
+.qr-code-user-control-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+.qr-code-user-control-div > textarea{
+    resize: vertical;
+    border: 1px solid gray;
+    padding: 0.5em;
+}
+.qr-code-user-control-div > button{
+    background-color: rgb(177, 255, 197);
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    color: rgb(107, 107, 107);
+    font-weight: 600;
+    width: 225px;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    margin: 0.5em;
+}
+.qr-code-user-control-div > button:hover{
+    background-color: rgb(35, 223, 82);
+}
+
+.qr-code-genereted-img-container > input[type=file]{
+    background-color: antiquewhite;
+    padding: 3em;
+    border: 1px dashed gray;
+}
+#QR-Code-Link-text{
+    display: none;
+    border: 1px solid green;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+#QR-Code-Link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#QR-Code-text-span{
+    position: absolute;
+    color: rgb(44, 44, 44);
+    text-align: center;
+    width: 90%;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(0, 0, 0);
+}
