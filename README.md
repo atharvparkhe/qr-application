@@ -1,112 +1,114 @@
 
-# QR Code Application
+# QR Application
 
 This is a basic QR Code application.
-Using this application you can generate QR code for you text/links.
+Using this application you can generate QR code for your text/links.
 Using this application you can read (decode) QR codes.
 
-## Author - Atharva Parkhe
 
-- Github - [atharvparkhe](https://www.github.com/atharvparkhe/)
-- LinkedIn - [Atharva Parkhe](https://www.linkedin.com/in/atharva-parkhe-3283b2202/)
-- Instagram - [atharvparkhe](https://www.instagram.com/atharvparkhe/)
-- Twitter - [atharvparkhe](https://www.twitter.com/atharvparkhe/)
+## 🔗 Content
 
-## Features
+* [Overview](#qr-application)
+* [Content](#🔗-content)
+* [Features](#📋-features)
+* [Tech Stack](#🧰-tech-stack)
+* [API Reference](#🛠-api-reference)
+* [Run Locally](#💻-run-locally)
+* [Documentation](#📄-documentation)
+* [Demo](#🧑🏻‍💻-demo)
+* [Screen-Shots](#🌄-screen-shots)
+* [Author](#🙋🏻‍♂️-author)
 
-- Generate QR codes for text and links.
+
+## 📋 Features
+
 - QR codes generated are universally accepted.
+- Generate QR codes for text and links.
 - Read/Decode QR codes.
 
-## Tech Stack
 
-**Backebd:** Django *(Python)*
+## 🧰 Tech Stack
 
-**Frontend:** ReactJS *(Java-Script)*
+**Backebd:** Django, Django REST Framework *(Python)*
 
-## API Reference
+**Frontend:** HTML, CSS, Javascript
 
-#### Get all items
 
-```http
-  POST /api/read/
-```
+## 🛠 API Reference
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `file` | `image (file)` | **Required**. Upload Image file (form-data) |
+**Postman Endpoints** : https://www.getpostman.com/collections/cd81994f26e4f66094be
 
-**RESPONSE** - Decoded text from the QR code Image.
+![ENV file](docs/ss.png)
 
-#### Get item
+**API Endpoints JSON file** (for importing into thunderclient/postman) is available in the docs folder or click [here](docs/endpoints.json) 
 
-```http
-  GET /api/generate/
-```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `text`      | `string` | **Required**. Text to be converted into QR code |
+## 💻 Run Locally
 
-**RESPONSE** - QR code.
-
-## Run Locally
-
-***Step#1 :*** Create Virtual Environment
+***Step#1 : Clone Project Repository***
 
 ```bash
-  virtualenv env
+git clone https://github.com/atharvparkhe/qr-application.git && cd qr-application
 ```
 
-***Step#2 :*** Activate Virtual Environment
+***Step#2 : Create Virtual Environment***
 
-```bash
-  source env/bin/activate
-```
+* If *virtualenv* is not istalled :
+  ```bash
+    pip install virtualenv
+  ```
+* **In Windows :**
+  ```bash
+    virtualenv env && env/Scripts/activate
+  ```
+* **In Linux or MacOS :**
+  ```bash
+    virtualenv env && source env/bin/activate
+  ```
 
-***Step#3 :*** Clone the project
-
-```bash
-  git clone https://github.com/atharvparkhe/QRcode.git
-```
-
-***Step#4 :*** Go to the project directory
-
-```bash
-  cd QRcode
-```
-
-***Step#5 :*** Install dependencies
+***Step#3 : Install Dependencies***
 
 ```bash
   pip install -r requirements.txt
 ```
 
-***Step#6 :*** Make Migrations
+***Step#4 : Run Server***
 
 ```bash
-  python3 manage.py makemigrations
-  python3 manage.py migrate
+  python manage.py runserver
 ```
+- *Open the "Templates" folder and then open "mainPage.html"*
 
-***Step#7 :*** Run Server
+- *Check the terminal if any error.*
 
-```bash
-  python3 manage.py runserver
-```
 
-Check the terminal if any error.
+## 📄 Documentation
 
-## Documentation
+The docs folder contain all the project documentations and screenshots of the project.
 
-The docs folder contain all the project documentations and screenshots related the project.
 
-Postman Endpoints - https://www.getpostman.com/collections/cd81994f26e4f66094be
+## 🧑🏻‍💻 Demo
 
-**ENDPOINTS**
+![Implementation](docs/abc.gif)
 
-![ENV file](docs/ss.png)
+YouTube Link : https://youtu.be/XUz8AXPYfP8
 
-## Demo
 
-Youtube Tutorial - I will upload tutorial video soon. Stay Tuned.
+## 🌄 Screen-Shots
+
+![Main Screen](docs/project/main-screen.png)
+![Generate QR Screen](docs/project/generate-screen.png)
+![Decode QR Screen](docs/project/read-screen.png)
+
+
+## 🙋🏻‍♂️ Author
+
+**🤝 Connect with Atharva Parkhe**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/atharva-parkhe-3283b2202/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/atharvparkhe/)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.twitter.com/atharvparkhe/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/atharvparkhe/)
+[![LeetCode](https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black)](https://leetcode.com/patharv777/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UChimOJO64hOqtE7HCgtiIig)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8WNC43Xsfc)
