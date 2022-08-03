@@ -1,5 +1,5 @@
 
-### QR Application
+## QR Application
 
 This is a basic QR Code application.
 Using this application you can generate QR code for your text/links.
@@ -9,15 +9,15 @@ Using this application you can read (decode) QR codes.
 ### 🔗 Content
 
 * [Overview](#qr-application)
-* [Content](#🔗-content)
-* [Features](#📋-features)
-* [Tech Stack](#🧰-tech-stack)
-* [API Reference](#🛠-api-reference)
-* [Run Locally](#💻-run-locally)
-* [Documentation](#📄-documentation)
-* [Demo](#🧑🏻‍💻-demo)
-* [Screen-Shots](#🌄-screen-shots)
-* [Author](#🙋🏻‍♂️-author)
+* [Content](#content)
+* [Features](#features)
+* [Tech Stack](#tech-stack)
+* [API Reference](#api-reference)
+* [Run Locally](#run-locally)
+* [Documentation](#documentation)
+* [Demo](#demo)
+* [Screen-Shots](#screen-shots)
+* [Author](#author)
 
 
 ### 📋 Features
