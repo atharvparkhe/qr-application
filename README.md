@@ -1,12 +1,12 @@
 
-# QR Application
+### QR Application
 
 This is a basic QR Code application.
 Using this application you can generate QR code for your text/links.
 Using this application you can read (decode) QR codes.
 
 
-## 🔗 Content
+### 🔗 Content
 
 * [Overview](#qr-application)
 * [Content](#🔗-content)
@@ -20,21 +20,21 @@ Using this application you can read (decode) QR codes.
 * [Author](#🙋🏻‍♂️-author)
 
 
-## 📋 Features
+### 📋 Features
 
 - QR codes generated are universally accepted.
 - Generate QR codes for text and links.
 - Read/Decode QR codes.
 
 
-## 🧰 Tech Stack
+### 🧰 Tech Stack
 
 **Backebd:** Django, Django REST Framework *(Python)*
 
 **Frontend:** HTML, CSS, Javascript
 
 
-## 🛠 API Reference
+### 🛠 API Reference
 
 **Postman Endpoints** : https://www.getpostman.com/collections/cd81994f26e4f66094be
 
@@ -43,7 +43,7 @@ Using this application you can read (decode) QR codes.
 **API Endpoints JSON file** (for importing into thunderclient/postman) is available in the docs folder or click [here](docs/endpoints.json) 
 
 
-## 💻 Run Locally
+### 💻 Run Locally
 
 ***Step#1 : Clone Project Repository***
 
@@ -82,26 +82,26 @@ git clone https://github.com/atharvparkhe/qr-application.git && cd qr-applicatio
 - *Check the terminal if any error.*
 
 
-## 📄 Documentation
+### 📄 Documentation
 
 The docs folder contain all the project documentations and screenshots of the project.
 
 
-## 🧑🏻‍💻 Demo
+### 🧑🏻‍💻 Demo
 
 ![Implementation](docs/abc.gif)
 
 YouTube Link : https://youtu.be/XUz8AXPYfP8
 
 
-## 🌄 Screen-Shots
+### 🌄 Screen-Shots
 
 ![Main Screen](docs/project/main-screen.png)
 ![Generate QR Screen](docs/project/generate-screen.png)
 ![Decode QR Screen](docs/project/read-screen.png)
 
 
-## 🙋🏻‍♂️ Author
+### 🙋🏻‍♂️ Author
 
 **🤝 Connect with Atharva Parkhe**
 
