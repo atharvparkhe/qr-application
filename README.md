@@ -54,28 +54,28 @@ git clone https://github.com/atharvparkhe/qr-application.git && cd qr-applicatio
 ***Step#2 : Create Virtual Environment***
 
 * If *virtualenv* is not istalled :
-  ```bash
-    pip install virtualenv
-  ```
+```bash
+pip install virtualenv
+```
 * **In Windows :**
-  ```bash
-    virtualenv env && env/Scripts/activate
-  ```
+```bash
+virtualenv env && env/Scripts/activate
+```
 * **In Linux or MacOS :**
-  ```bash
-    virtualenv env && source env/bin/activate
-  ```
+```bash
+virtualenv env && source env/bin/activate
+```
 
 ***Step#3 : Install Dependencies***
 
 ```bash
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ***Step#4 : Run Server***
 
 ```bash
-  python manage.py runserver
+python manage.py runserver
 ```
 - *Open the "Templates" folder and then open "mainPage.html"*
 
