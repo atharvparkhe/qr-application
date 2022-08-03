@@ -55,21 +55,21 @@ git clone https://github.com/atharvparkhe/qr-application.git && cd qr-applicatio
 
 * If *virtualenv* is not istalled :
 ```bash
-pip install virtualenv
+pip install virtualenv && virtualenv env
 ```
 * **In Windows :**
 ```bash
-virtualenv env && env/Scripts/activate
+env/Scripts/activate
 ```
 * **In Linux or MacOS :**
 ```bash
-virtualenv env && source env/bin/activate
+source env/bin/activate
 ```
 
 ***Step#3 : Install Dependencies***
 
 ```bash
-pip install -r requirements.txt
+pip install --upgrade pip -r requirements.txt
 ```
 
 ***Step#4 : Run Server***
